@@ -1,0 +1,9 @@
+#!/bin/env python3
+import sys
+import os
+
+cwd = os.getcwd()
+AGV = sys.argv[1:]
+fn = AGV[0][0:-4]
+cmd = f"cd {cwd} && g++ {fn}.cpp -o {fn}"
+os.system(cmd)
